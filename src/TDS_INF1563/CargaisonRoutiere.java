@@ -23,14 +23,6 @@ public class CargaisonRoutiere extends Cargaison {
         super(distance);
     }
 
-    public boolean ajouter(Marchandise m) {
-        poidsTotal += m.getPoids();
-        volumeTotal += m.getVolume();
-        nombreMarchandises +=1;
-
-        return  poidsTotal <= getLimitePoids() && volumeTotal <= getLimiteVolume();
-    }
-
     public double coutTransport() {
         return distance * (COUT_VIDE + COUT_PAR_TONNE * (poidsTotal/1000));
     }

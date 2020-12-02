@@ -10,16 +10,13 @@ public class CargaisonMaritime extends Cargaison {
         return LIMITE_POIDS;
     }
 
-
     public double getLimiteVolume() {
         return LIMITE_VOL;
     }
 
-
     public int getCompteMarchandises() {
         return this.nombreMarchandises;
     }
-
 
     public CargaisonMaritime(int distance) {
         super(distance);
@@ -28,5 +25,4 @@ public class CargaisonMaritime extends Cargaison {
     public double coutTransport() {
         return distance * (COUT_PAR_TONNE * (poidsTotal/1000));
     }
-
 }

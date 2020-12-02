@@ -23,17 +23,7 @@ public class CargaisonAerienne extends Cargaison {
         super(distance);
     }
 
-    public boolean ajouter(Marchandise m) {
-        poidsTotal += m.getPoids();
-        volumeTotal += m.getVolume();
-        nombreMarchandises +=1;
-
-        return  poidsTotal <= getLimitePoids() && volumeTotal <= getLimiteVolume();
-    }
-
     public double coutTransport() {
         return COUT_VIDE + distance * (COUT_PAR_TONNE * (poidsTotal/1000));
     }
-
-
 }
